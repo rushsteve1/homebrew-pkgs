@@ -20,6 +20,7 @@ class TrashD < Formula
   end
 
   test do
-    assert_match(/trash-d version #{version}.*/, shell_output("#{bin}/trash --version"))
+    assert_match(/trash-d version #{version}/, shell_output("#{bin}/trash --version"))
+    assert File.exists? "#{man1}/trash.1"
   end
 end
