@@ -1,4 +1,10 @@
-# Rushsteve1 Pkgs
+# Rushsteve1's Homebrew Packages
+
+My collection of custom [Homebrew](https://brew.sh) packages.
+
+These should all be mostly stable, but use at your own risk.
+
+Pre-built binary Bottles should be produced for all packages, if you prefer.
 
 ## How do I install these formulae?
 
