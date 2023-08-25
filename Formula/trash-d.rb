@@ -14,13 +14,13 @@ class TrashD < Formula
     system "strip", "./build/trash"
     bin.install "./build/trash"
 
-    system "ronn", "--roff", "--pipe", "MANUAL.md", ">", "trash.1"
+    system "ronn --roff --pipe MANUAL.md > trash.1"
     man.mkpath
     man1.install "trash.1"
   end
 
   test do
     assert_match(/trash-d version #{version}/, shell_output("#{bin}/trash --version"))
-    assert File.exists? "#{man1}/trash.1"
+    assert_predicate "#{man1}/trash.1", :exist?
   end
 end
